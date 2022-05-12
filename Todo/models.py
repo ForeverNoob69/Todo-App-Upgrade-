@@ -18,3 +18,5 @@ class task(models.Model):
 
     def __str__(self):
         return self.task
+    def Meta:
+        ordering = ["complete"]
