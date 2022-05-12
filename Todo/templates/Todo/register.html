@@ -1,0 +1,20 @@
+{% extends 'Todo/main.html' %} {% block content %}
+<style>
+  .label {
+    padding: 15px;
+  }
+</style>
+<div class="header-bar">
+  <p>
+    Create a New Account.
+    <a href="{% url 'login' %}" class="sign">Already have an account?</a>
+  </p>
+</div>
+<form action="" method="post">
+  {% csrf_token %}
+  <div class="label">{{form.username.label}} {{form.username}}</div>
+  <div class="label">{{form.password1.label}} {{form.password1}}</div>
+  <div class="label">{{form.password2.label}} {{form.password2}}</div>
+  <button type="submit" style="margin: 20px">Submit</button>
+</form>
+{% endblock %}

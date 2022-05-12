@@ -1,0 +1,13 @@
+{% extends 'Todo/main.html' %} {% block content %}
+<div class="header-bar" style="height: 65px">
+  <h1>Update Task:</h1>
+  <a href="{% url 'Home' %}" class="sign" style="height: 20px">Back</a>
+</div>
+<div class="card-body">
+  <form action="" method="POST">
+    {% csrf_token %} {{form.as_p}}
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+{% endblock content %}
